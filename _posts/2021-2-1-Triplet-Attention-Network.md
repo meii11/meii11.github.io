@@ -66,4 +66,21 @@ tags: paper videoUnderstanding 2021
 最后的结果就不贴上来了，总体来说实现了参数量不增加的情况下，准确度有些许提升（原文用的是 error rate）
 
 ## Code
-xxx
+
+### Z-Pool
+
+```python
+torch.cat((torch.max(x, 1)[0].unsqueeze(1), torch.mean(x, 1).unsqueeze(1)), dim=1)
+```
+
+### Triplet Attention
+
+```python
+x_perm1 = x.permute(0, 2, 1, 3).contiguous()
+        x_out1 = self.cw(x_perm1)
+        x_out11 = x_out1.permute(0, 2, 1, 3).contiguous()
+```
+
+```python
+x_out = 1 / 3 * (x_out + x_out11 + x_out21)
+```
