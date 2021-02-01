@@ -1,6 +1,6 @@
 ---
 title: 'Rotate to Attend: Convolutional Triplet Attention Module'
-tags: 'paper', 'video understanding' ,'2021'
+tags: paper videoUnderstanding 2021
 ---
 > Rotate to Attend: Convolutional Triplet Attention Module
 
@@ -34,12 +34,12 @@ tags: 'paper', 'video understanding' ,'2021'
 
 传统的计算 channel attention（上图左）的方式是*computing channel attention involve computing a singular weight, often a scalar for each channel in the input tensor and then scaling these feature maps uniformly using the singular weight.*
 
-但这样作者说*the input tensor is spatially decomposed to one pixel per channel by performing global average pooling. This result in a major loss of spatial information and thus the inter-dependence between the channel dimension and the spatial dimension is absent when computing attention on these single pixel channels.*
-也就是说你虽然对 channel 进行了 attention，但是在这个过程中你缺失了 spatial information。
+但这样作者说 *the input tensor is spatially decomposed to one pixel per channel by performing global average pooling. This result in a major loss of spatial information and thus the inter-dependence between the channel dimension and the spatial dimension is absent when computing attention on these single pixel channels.*
+ 也就是说你虽然对 channel 进行了 attention，但是在这个过程中你缺失了 spatial information。
 
-因此CBAM（上图右）引入了一个Spatial attention用来补充Channel attention的补充，但是这个过程中作者说*channel attention and spatial attention are segregated and computed independent of each other.*
+因此CBAM（上图右）引入了一个Spatial attention用来补充Channel attention的补充，但是这个过程中作者说 *channel attention and spatial attention are segregated and computed independent of each other.*
 
-所以作者就想啊，上面的方法channel feature和spatial feature都independent，那我合并一下不就好了？所以作者的Module就是*capture dependencies between the (C, H),(C, W)和(H, W) dimensions of the input tensore respectively*
+所以作者就想啊，上面的方法 channel feature 和 spatial feature 都 independent，那我合并一下不就好了？所以作者的 Module 就是 *capture dependencies between the (C, H),(C, W)和(H, W) dimensions of the input tensore respectively*
 
 ## Triplet Attention Module
 
