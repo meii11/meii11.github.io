@@ -24,7 +24,7 @@ tags: paper videoUnderstanding 2021
 *They provided substantial performance gains over their squeeze-and-excite counterpart with a small computational overhead.*
 
 
-![SENet](/screenshots/SENet.png)
+![SENet](https://i.loli.net/2021/02/01/KhCDN53FnokVUMB.png)
 
 关于SENet，首先利用一个池化层（或者两个池化层：Global Average Pooling and Global Max Pooling）对 spatial information 进行信息聚合，得到形状为 C\*1\*1 的 tensor，之后通过一个 Bottleneck，中间有一个 Relu 层（当然这就是一个 attention 操作）。这里的思路是，将 spatial feature 通过 pooling 操作聚合成 1*1 的形状，之后 relu 操作便是将 channel 的信息进行 attention（负的抛弃掉，正的进行保留），最后通过 expand_as 操作加到原来的 input 上面，即可以理解为将 attention 之后的 channel 信息加到了所有的 spatial feature 上面。
 
@@ -59,7 +59,7 @@ tags: paper videoUnderstanding 2021
 
 这样三个 branches 的结果相加并乘以 1/3 便是最终输出。
 
-![Tri-module](/screenshots/Tri_module.png)
+![Tri-module](https://i.loli.net/2021/02/01/afoTGkgIK8XcwVy.png)
 
 ### Result
 
