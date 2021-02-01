@@ -12,11 +12,11 @@ tags: -paper
 
 之前的图像领域 cv 算法已相当饱和了，通过在 spatial location 或是 channels 进行单独 attention 操作，使得准确度又有了一波提升。那么作者就突发奇想了，我能不能做一种 cross-dimension interaction，通过这种跨纬度的 attention 使得模型更优化呢？
 
-对于一个输入，首先通过 risidual transformation 操作使其进行旋转（其实就是一个 permute），然后通过卷积使得 channel 和 spatial feature 进行融合，作者说这里是**negligible computational overhead**，即添加这个模块带来的计算增加是可以忽略不计的。
+对于一个输入，首先通过 risidual transformation 操作使其进行旋转（其实就是一个 permute），然后通过卷积使得 channel 和 spatial feature 进行融合，作者说这里是 **negligible computational overhead**，即添加这个模块带来的计算增加是可以忽略不计的。
 
 ## Someting Related
 
-作者说，通过对通道或者空间信息分别进行 attention 的意义在于，可以使得模型**have the ability to learn where to attend and further focus on the target objects**。这方面做的比较突出的是 SENet（之后我也会去读这篇文章）。
+作者说，通过对通道或者空间信息分别进行 attention 的意义在于，可以使得模型 **have the ability to learn where to attend and further focus on the target objects**。这方面做的比较突出的是 SENet（之后我也会去读这篇文章）。
 
 ---
 ### CBAM and SENet
