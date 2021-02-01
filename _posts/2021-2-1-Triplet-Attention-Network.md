@@ -1,6 +1,8 @@
 ---
 title: 'Rotate to Attend: Convolutional Triplet Attention Module'
-tags: paper, video understanding， 2021
+tags: -paper 
+-video understanding 
+-2021
 ---
 > Rotate to Attend: Convolutional Triplet Attention Module
 
