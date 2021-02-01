@@ -26,9 +26,6 @@ titles:
 key: page-about
 ---
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
-
-
 ```javascript
 (() => console.log('Hello, World!'))();
 ```
