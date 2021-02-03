@@ -1,8 +1,8 @@
 ---
 title: 'Rotate to Attend: Convolutional Triplet Attention Module'
-tags: paper videoUnderstanding Y2021
+tags: paper CV Y2021
 ---
-> Rotate to Attend: Convolutional Triplet Attention Module
+<!-- > Rotate to Attend: Convolutional Triplet Attention Module -->
 
 这是一篇发表在 WACV2021 上的文章，初读下来其实就是作者想方设法地想将 channels 和其他通道（spatial location ~~or temporal channel~~）进行融合来使得信息进行交互、相融。
 
