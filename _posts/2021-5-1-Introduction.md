@@ -41,7 +41,16 @@ Introduction 我认为主要可以分为三部分：介绍课题的大方向 -> 
 
 文章比较直接，首先说出硬件友好型的视频理解重要性，然后简单介绍一下时间建模的重要性，以及之前的一些工作，他们要么使用2dcnn使得无法有效建模时间信息，要么使用3dcnn但是有这较大的计算开销。一些在时间建模和计算开销之间trade-off的方法（post-hoc fusion和mid-level temporal fusion）但是会牺牲掉低级别的信息，而这些信息是比较重要的。
 
-这里较为简短的介绍了课题大方向+前人的相关工作及其待改进的地方
+这里较为简短的介绍了课题大方向+前人的相关工作及其待改进的地方。我感觉我的论文也可以一定借鉴这里，比如先说明时间建模的重要性，再说明普通的3dcnn较为耗时以及TSM因为涉及较多的移动操作对内存要求较高，我们可以追求对硬件更加友好的轻便模型，这种模型不仅可以保证一定的性能，并且训练的更快。
+
+> In this paper, we propose a new perspective for efficient temporal modeling in video understanding by proposing a novel Temporal Shift Module (TSM). Concretely, an activation in a video model can be represented as A ∈ RN×C×T×H×W, where N is the batch size, C is the number of channels, T is the temporal dimension, H and W are the spatial resolutions. Traditional 2D CNNs operate independently over the dimension T; thus no temporal modeling takes effects. In contrast, our Temporal Shift Module (TSM) shifts the channels along the temporal dimension, both forward and backward. As shown in Figure 1b, the information from neighboring frames is mingled with the current frame after shifting. Our intuition is: the convolution operation consists of shift and multiply-accumulate. We shift in the time dimension by ±1 and fold the multiply-accumulate from time dimension to channel dimension. For real-time online video understanding, future frames can’t get shifted to the present, so we use a uni-directional TSM to perform online video understanding.
+> Despite the zero-computation nature of the shift operation, we empirically find that simply adopting the spatial shift strategy used in image classifications introduces two major issues for video understanding: (1) it is not efficient: shift operation is conceptually zero FLOP but incurs data movement. The additional cost of data movement is non-negligible and will result in latency increase. This phenomenon has been exacerbated in the video networks since they usually have a large memory consumption (5D activation). (2) It is not accurate: shifting too many channels in a network will significantly hurt the spatial modeling ability and result in performance degradation. To tackle the prob- lems, we make two technical contributions. (1) We use a temporal partial shift strategy: instead of shifting all the channels, we shift only a small portion of the channels for efficient temporal fusion. Such strategy significantly cuts down the data movement cost. (2) We insert TSM inside residual branch rather than outside so that the activation of the current frame is preserved, which does not harm the spatial feature learning capability of the 2D CNN backbone.
+
+这里介绍了作者的模型，他使用沿着时间维度移动通道来使模型获得时间信息，因为只有位移操作，因此几乎不会增加计算消耗。
+
+
 ## Video Modeling with Correlation Networks
+
+
 ###
 
