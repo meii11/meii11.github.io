@@ -1,15 +1,12 @@
 ---
-title: 'Multimodal Machine Learning: A Survey and Taxonomy'
+title: 'Some Paper about Multimodel'
 tags: paper MULTIMODEL Y2021
 ---
-今天介绍的是一篇关于Multimodel Retrival的综述类文章。
-> We see objects, hear sounds, feel texture, smell odors, and so on.
+最近要做的项目是基于跨模态检索(Cross-modal Retrieval)，于是这次首先介绍一篇综述类文章，后介绍两篇比较相关的论文。
+> It takes one type of data as the query to retrieve relevant data to another.
 
-## Introduction
-作者将 modality 定义为 “a modality refers to a way in which something happens or is experienced.”。这片综述主要集中在三种模态：自然语言、视觉信号和有声信号。
-我们的模型需要解释和对多模态信息进行解释(reason about)，并对他们进行处理和关联。因此作者提出了五种挑战：
-+ Representation（表征）
-+ Translation（翻译）
-+ Alignment（对齐）
-+ Fusion（融合）
-+ Co-learning（联合学习）
+## A comprehensive Survey on Cross-modal Retrieval
+
+### Intro
+
+多模态数据(multi-modal data)有着异构的属性(heterogeneous property)
