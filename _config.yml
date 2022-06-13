@@ -154,17 +154,17 @@ yat:
 #   - about.md
 
 # Page default value
-# defaults:
- home:
-   heading: "Hey."
-   subheading: "~"
+ defaults:
+   home:
+     heading: "Hey."
+     subheading: "~"
 #     banner: "Your image url"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
 # config it by the front matter for one specific post
 # banner:
-#   video: null             # Video banner source
+#   video: null             # Video banner sourcei9
 #   loop: true              # Video loop
 #   volume: 0               # Video volume (100% is 1.0)
 #   start_at: 0             # Video start time
