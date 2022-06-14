@@ -9,6 +9,7 @@
         });
     </script>
 </head>
+
 ---
 layout: post
 title: Robust High-Resolution Video Matting with Temporal Guidance
