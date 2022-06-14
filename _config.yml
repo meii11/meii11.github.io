@@ -146,7 +146,7 @@ yat:
 # this and add the path to the pages in order as they should show up
 header_pages:
   index.html
-#   - archives.html
+  archives.html
 #   - categories.html
 #   - tags.html
 ##   - about.html
@@ -154,8 +154,8 @@ header_pages:
 # Page default value
 # defaults:
 home:
-heading: ""
-subheading: ""
+heading: " "
+subheading: " "
 #banner: "/assets/images/banners/genshin.jpeg"
 
 # Banner default settings
