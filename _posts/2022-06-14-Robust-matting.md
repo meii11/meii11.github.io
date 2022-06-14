@@ -16,7 +16,8 @@ tags: [paper22, matting]
 
 扣图是一种从输入图像中预测aplha遮罩以及前景颜色的过程，通常来说，一张图片可以认为是前景 $F$ 和背景 $B$ 通过 $\alpha$ 的线性组合，即： 
 
- $I=\alpha F + (1-\alpha)B$
+ $ I=\alpha F + (1-\alpha)B $ 
+ $ 2^{\frac{n-1}{3}} $
 
 从公式中可以看出，只要求出 $\alpha$ 和 $F$ 就能将前景融合（composite）到新的背景当中，达到背景替换的目的。
 
