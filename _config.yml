@@ -144,8 +144,8 @@ yat:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
-#   - index.html
+header_pages:
+  index.html
 #   - archives.html
 #   - categories.html
 #   - tags.html
@@ -154,8 +154,8 @@ yat:
 # Page default value
 # defaults:
 home:
-heading: " "
-subheading: " "
+heading: ""
+subheading: ""
 #banner: "/assets/images/banners/genshin.jpeg"
 
 # Banner default settings
