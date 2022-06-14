@@ -1,7 +1,7 @@
 {%- if page.paginator -%}
   {%- assign paginator = page.paginator -%}
-{%- elsif paginator == nil -%}
-  {%- assign paginator = site -%}
+<!-- {%- elsif paginator == nil -%}
+  {%- assign paginator = site -%} -->
 {%- endif -%}
 
 {%- if paginator.posts.size > 0 -%}
