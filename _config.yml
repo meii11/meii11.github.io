@@ -156,7 +156,7 @@ yat:
 home:
 heading: " "
 subheading: " "
-#banner: "/assets/images/banners/genshin.jpeg"
+banner: "/assets/images/banners/genshin.jpeg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
