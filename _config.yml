@@ -154,8 +154,8 @@ yat:
 # Page default value
 # defaults:
 home:
-heading: "Hey"
-subheading: "My Development Notes and Literature Reading"
+heading: " "
+subheading: " "
 banner: "/assets/images/banners/genshin.jpeg"
 
 # Banner default settings
