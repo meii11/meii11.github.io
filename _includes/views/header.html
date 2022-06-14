@@ -32,7 +32,7 @@
             </span>
           </label>
 
-          <!-- <div class="trigger">
+          <div class="trigger">
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
@@ -40,7 +40,7 @@
               {%- endif -%}
             {%- endfor -%}
 
-            {%- assign name = 'translate_langs' -%}
+            <!-- {%- assign name = 'translate_langs' -%}
             {%- include functions.html func='get_value' -%}
             {%- assign translate_langs = return -%}
             {%- if translate_langs.size > 0 -%}
@@ -50,8 +50,8 @@
               <span class="page-link">
                   {%- include extensions/google-translate.html -%}
               </span>
-            {%- endif -%}
-          </div> -->
+            {%- endif -%} -->
+          </div>
         </nav>
       {%- endif -%}
     </div>
