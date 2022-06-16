@@ -123,3 +123,23 @@ RobustMatting 模型基于如下几个原因在抠图和语义物体分割任务
 有对前景的L1 loss、temporal coherence loss：
 
 ![截屏2022-06-15 下午4.15.25](/assets/images/md_image/RobustMatting/fomula2.png)
+
+## Others
+
+这里主要记录一下评价指标等因素
+
+### 评价指标
+
+作者针对 $\alpha$ 和前景 $F$ 采用了几种评价指标：
+
+- MAD (mean absolute difference)
+- MSE (mean square error)
+- Grad (spatial-gradient)
+- Conn (connectivity)
+- dtSDD 
+
+其中前四种用于评估质量，最后一种用于评估时间连续性。同样需要后续理解一下。
+
+### 一些不足
+
+如果背景中有人物的话，抠图会不准。另外如果复杂背景也会导致抠图不准。
